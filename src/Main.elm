@@ -51,8 +51,8 @@ view particles =
 
 stepParticle (Particle (x, y) (vx, vy) as p) =
   let h = 0.033 in
-  let f = computeForce p particles
-    Particle (x + h * vx, y + h * vy) (vx, vy)
+  -- let f = computeForce p particles
+  Particle (x + h * vx, y + h * vy) (vx, vy)
 viewParticle (Particle loc _) = shift loc (circle 20 |> filled (uniform Color.red))
 
 
